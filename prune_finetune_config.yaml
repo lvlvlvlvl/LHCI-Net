@@ -1,0 +1,69 @@
+# RT-DETR剪枝微调配置文件
+models:
+#  # 模型1: 剪枝微调
+#  - name: 'model1'
+#    model: 'D:\algorithms\RTDETR-mg\runs\Third\rtdetr-MobileMamba\weights\best.pt'
+#    prune_method: 'l1'
+#    prune_model_path: ''  # 留空表示需要重新剪枝，或指定已有剪枝模型路径
+#    speed_up: 1.5
+#    epochs: 200
+#    batch: 4
+#    imgsz: 640
+#    device: '0'
+#    project: 'runs/prune-finetune'
+#    global_pruning: true
+#    reg: 0.0005
+#    sl_epochs: 500
+#    sl_hyp: 'ultralytics/cfg/hyp.scratch.sl.yaml'
+
+
+
+
+
+
+  - name: 'M+1.6+l1'
+    model: 'D:\algorithms\RTDETR-mg\runs\Third\(rtdetr-CSP-PMSFA)+(rtdetr-HyperCompute-MFM)+(rtdetr-Pola-FMFFN)\weights\best.pt'
+    prune_method: 'l1'
+    prune_model_path: 'D:\algorithms\RTDETR-mg\runs\prune\M-speedup=1.6-l1 -prune\weights\prune.pt'  # 使用已有剪枝模型时可以指定路径
+    speed_up: 1.6
+    epochs: 200
+    batch: 4
+    imgsz: 640
+    device: '0'
+    project: 'runs/prune-finetune'
+    global_pruning: true
+    reg: 0.0005
+    sl_epochs: 500
+    sl_hyp: 'ultralytics/cfg/hyp.scratch.sl.yaml'
+
+  - name: 'M+1.6+lamp'
+    model: 'D:\algorithms\RTDETR-mg\runs\Third\(rtdetr-CSP-PMSFA)+(rtdetr-HyperCompute-MFM)+(rtdetr-Pola-FMFFN)\weights\best.pt'
+    prune_method: 'lamp'
+    prune_model_path: 'D:\algorithms\RTDETR-mg\runs\prune\M-speedup=1.6-lamp -prune\weights\prune.pt'  # 使用已有剪枝模型时可以指定路径
+    speed_up: 1.6
+    epochs: 200
+    batch: 4
+    imgsz: 640
+    device: '0'
+    project: 'runs/prune-finetune'
+    global_pruning: true
+    reg: 0.0005
+    sl_epochs: 500
+    sl_hyp: 'ultralytics/cfg/hyp.scratch.sl.yaml'
+
+  - name: 'M+1.6+group_norm'
+    model: 'D:\algorithms\RTDETR-mg\runs\Third\(rtdetr-CSP-PMSFA)+(rtdetr-HyperCompute-MFM)+(rtdetr-Pola-FMFFN)\weights\best.pt'
+    prune_method: 'group_norm'
+    prune_model_path: 'D:\algorithms\RTDETR-mg\runs\prune\M-speedup=1.6-group_norm -prune\weights\prune.pt'  # 使用已有剪枝模型时可以指定路径
+    speed_up: 1.6
+    epochs: 200
+    batch: 4
+    imgsz: 640
+    device: '0'
+    project: 'runs/prune-finetune'
+    global_pruning: true
+    reg: 0.0005
+    sl_epochs: 500
+    sl_hyp: 'ultralytics/cfg/hyp.scratch.sl.yaml'
+
+
