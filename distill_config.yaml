@@ -1,0 +1,84 @@
+
+models:
+
+
+#
+#
+#  - name: 'M-原始best权重-mgd-0.02'
+#    model: 'D:\algorithms\RTDETR-mg\runs\prune\M-speedup=1.6-group_taylor -prune\weights\prune.pt'
+#    teacher_weights: 'D:\algorithms\RTDETR-mg\runs\Third\(rtdetr-CSP-PMSFA)+(rtdetr-HyperCompute-MFM)+(rtdetr-Pola-FMFFN)\weights\best.pt'
+#    feature_loss_type: 'mgd'
+#    feature_loss_ratio: 0.02
+#    epochs: 200
+#    batch: 4
+#    imgsz: 640
+#    device: '0'
+#    project: 'runs/distill'
+#    prune_model: true #为true则导入剪枝后的prune.pt文件
+#    kd_loss_type: 'feature'
+#    kd_loss_decay: 'constant'
+#    kd_loss_epoch: 1.0
+#    logical_loss_type: 'logical'
+#    logical_loss_ratio: 0.25
+
+
+
+
+  - name: 'M-原始best权重-sp-0.08'
+    model: 'D:\algorithms\RTDETR-mg\runs\prune\M-speedup=1.6-group_taylor -prune\weights\prune.pt'
+    teacher_weights: 'D:\algorithms\RTDETR-mg\runs\Third\(rtdetr-CSP-PMSFA)+(rtdetr-HyperCompute-MFM)+(rtdetr-Pola-FMFFN)\weights\best.pt'
+    feature_loss_type: 'sp'
+    feature_loss_ratio: 0.08
+    epochs: 200
+    batch: 4
+    imgsz: 640
+    device: '0'
+    project: 'runs/distill'
+    prune_model: true #为true则导入剪枝后的prune.pt文件
+    kd_loss_type: 'feature'
+    kd_loss_decay: 'constant'
+    kd_loss_epoch: 1.0
+    logical_loss_type: 'logical'
+    logical_loss_ratio: 0.25
+
+
+
+
+  - name: 'M-原始best权重-chsim-0.08'
+    model: 'D:\algorithms\RTDETR-mg\runs\prune\M-speedup=1.6-group_taylor -prune\weights\prune.pt'
+    teacher_weights: 'D:\algorithms\RTDETR-mg\runs\Third\(rtdetr-CSP-PMSFA)+(rtdetr-HyperCompute-MFM)+(rtdetr-Pola-FMFFN)\weights\best.pt'
+    feature_loss_type: 'chsim'
+    feature_loss_ratio: 0.1
+    epochs: 200
+    batch: 4
+    imgsz: 640
+    device: '0'
+    project: 'runs/distill'
+    prune_model: true #为true则导入剪枝后的prune.pt文件
+    kd_loss_type: 'feature'
+    kd_loss_decay: 'constant'
+    kd_loss_epoch: 1.0
+    logical_loss_type: 'logical'
+    logical_loss_ratio: 0.25
+
+
+
+  - name: 'M-原始best权重-mimic-0.08'
+    model: 'D:\algorithms\RTDETR-mg\runs\prune\M-speedup=1.6-group_taylor -prune\weights\prune.pt'
+    teacher_weights: 'D:\algorithms\RTDETR-mg\runs\Third\(rtdetr-CSP-PMSFA)+(rtdetr-HyperCompute-MFM)+(rtdetr-Pola-FMFFN)\weights\best.pt'
+    feature_loss_type: 'mimic'
+    feature_loss_ratio: 0.08
+    epochs: 200
+    batch: 4
+    imgsz: 640
+    device: '0'
+    project: 'runs/distill'
+    prune_model: true #为true则导入剪枝后的prune.pt文件
+    kd_loss_type: 'feature'
+    kd_loss_decay: 'constant'
+    kd_loss_epoch: 1.0
+    logical_loss_type: 'logical'
+    logical_loss_ratio: 0.25
+
+
+
