@@ -1,1 +1,1 @@
-conde for LHCI-Net
+code for LHCI-Net
